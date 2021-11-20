@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python_dotenv
+tortoise-orm
+requests
+xlwt
+asyncpg
+aiomysql
+aiosqlite
+
+transformers
+sentencepiece
+torch

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from models import ConvertedText
+from application.models import ConvertedText
 from xlwt import Workbook, Worksheet
 from xlwt.CompoundDoc import XlsDoc
 

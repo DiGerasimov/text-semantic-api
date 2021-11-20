@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List
 
 import requests
-from models import ConvertedText, Output
+from application.models import ConvertedText, Output
 from requests.exceptions import ConnectionError
 
 running_jobs: List[ConvertedText] = []

@@ -8,9 +8,9 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from starlette.responses import Response
 from tortoise.contrib.fastapi import register_tortoise
 
-from models import ConvertedText, Input, Output, Task
-from services.report import generate_report_content, generate_report_file_name
-from services.text_converter import running_jobs, start_text_conversion
+from application.models import ConvertedText, Input, Output, Task
+from application.services.report import generate_report_content, generate_report_file_name
+from application.services.text_converter import running_jobs, start_text_conversion
 
 
 app = FastAPI(title="TextSemantic API")
@@ -73,7 +73,7 @@ def startup_event():
     register_tortoise(
         app=app,
         db_url=getenv('DB_URL'),
-        modules={"models": ["models"]},
+        modules={"models": ["application.models"]},
         generate_schemas=True,
         add_exception_handlers=False,
     )
